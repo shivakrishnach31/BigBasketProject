@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="suite1" verbose="1" >
+
+
+
+<test name = "test base"><classes><class name ="Tests.TestBase"></class></classes></test>
+<test name ="Registration"><classes><class name ="Tests.A_RegistrationTest"></class></classes></test>
+<test name ="Signin"><classes><class name ="Tests.AA_SignInTest"></class></classes></test>
+<test name ="add itesm to basket"><classes><class name ="Tests.AAA_AddToBasketTest"></class></classes></test>
+<test name ="sort items"><classes><class name ="Tests.AAAA_ItemsSortTest"></class></classes></test>
+<test name ="items rate check"><classes><class name ="Tests.AAAAA_ItemRateCheckTest"></class></classes></test>
+
+
+
+
+</suite>

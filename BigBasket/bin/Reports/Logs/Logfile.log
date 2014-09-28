@@ -1,0 +1,13 @@
+28/09/2014 21:44:31 devpinoyLogger Chosen Browser and Opened
+28/09/2014 21:44:44 devpinoyLogger http://www.bigbasket.com/   has been opened
+28/09/2014 21:44:45 devpinoyLogger Selected a city randomly
+28/09/2014 21:44:45 devpinoyLogger Filling registration form by getting required data from Excel sheet
+28/09/2014 21:45:54 devpinoyLogger User signing in with the valid credential
+28/09/2014 21:46:17 devpinoyLogger Login successful
+28/09/2014 21:46:50 devpinoyLogger Selecting a item category from left navigation panel, to add 3 items to basket
+28/09/2014 21:47:00 devpinoyLogger Adding items to basket
+28/09/2014 21:47:21 devpinoyLogger Checking for the items added to basket
+28/09/2014 21:47:53 devpinoyLogger Adding items to basket!
+28/09/2014 21:48:21 devpinoyLogger opening complete list ot items to check the sorting order based its popularity,low to high and high to low prices
+28/09/2014 21:52:50 devpinoyLogger Checking soring order from Low to High
+28/09/2014 21:52:50 devpinoyLogger Checking sorting order from High to Low
