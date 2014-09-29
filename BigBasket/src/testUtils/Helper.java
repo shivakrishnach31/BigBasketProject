@@ -55,7 +55,7 @@ public class Helper extends TestBase {
 		  
 		} else {
 			 Assert.fail("No such element found");
-			 System.out.println("Selected some city by default");
+			 
 		}
 		}catch(Exception e) {
 			e.printStackTrace();
