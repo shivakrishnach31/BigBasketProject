@@ -19,13 +19,19 @@ public class AAAA_ItemsSortTest extends Helper {
 	@Test
 	public void checkItemSort() throws Exception{
 
-		// choosing browser
+		/*
+		 * ------Chossing Browser
+		 */
+		
 		h.chooseBrowser(); 
 		driver.get(config.getProperty("testUrl"));
 		h.citySelection();
 
 	  	
-	  	//-------------- Moving to View Complete Products list
+	  	/*
+	  	 * -------------- Moving to View Complete Products list
+	  	 */
+		
 		log.debug("opening complete list ot items to check the sorting order based its popularity,low to high and high to low prices");
 	  	h.waitForElement(30,By.linkText(or.getProperty("completershop_linktext")));
 	  	if (driver.findElements(By.linkText(or.getProperty("completershop_linktext"))).isEmpty()) {
@@ -36,7 +42,9 @@ public class AAAA_ItemsSortTest extends Helper {
 	  	h.sleep(15);
 	  	
 	  	
-	  	// ---------- Storing Main product categories in list and click one randomly 
+	  	/*
+	  	 * ---------- Storing Main product categories in list and click one randomly
+	  	 */
 	  	
 		List<WebElement> itemCategories = driver.findElement(By.className(or.getProperty("MajorCategories"))).findElements(By.tagName(or.getProperty("categoryoptions_tag")));
 		int itemCategory = r.nextInt(itemCategories.size());
@@ -73,7 +81,10 @@ public class AAAA_ItemsSortTest extends Helper {
 			h.takeScreenShots(i);
 		}
 		
-		// Checking sorting order from Low to high
+		/*
+		 * ------- Checking sorting order from Low to high
+		 */
+		
 		log.debug("Checking soring order from Low to High");
 		System.out.println(arr);
 		for (int j = 0; j < arr.size()-1; j++) {
@@ -84,7 +95,10 @@ public class AAAA_ItemsSortTest extends Helper {
 		}
 		Reporter.log("Low to high sorted properly");
 		
-		// Checking sorting order from High to Low
+		/*
+		 * ----Checking sorting order from High to Low
+		 */
+		
 		log.debug("Checking sorting order from High to Low");
 		System.out.println(arr1);
 		for (int j = 0; j < arr1.size()-1; j++) {
@@ -94,6 +108,7 @@ public class AAAA_ItemsSortTest extends Helper {
 			}
 		}
 		Reporter.log("High to low sorted properly");
+		
 		driver.close();
 	}
 }

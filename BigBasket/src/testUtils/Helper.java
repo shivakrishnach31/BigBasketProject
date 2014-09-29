@@ -48,7 +48,6 @@ public class Helper extends TestBase {
 	public void citySelection(){
 		try{
 		List<WebElement> citiesList = driver.findElement(By.id(or.getProperty("citypopup_id"))).findElements(By.tagName(or.getProperty("citybutton_tag")));
-	 	System.out.println(citiesList.size());
 	 	if (citiesList.size() > 0) {
 	 		int city = r.nextInt(citiesList.size());
 	 		citiesList.get(city).click();

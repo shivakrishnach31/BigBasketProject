@@ -14,10 +14,19 @@ import testUtils.Helper;
 public class AAAAA_ItemRateCheckTest extends Helper {
 	@Test
 	public void rateCheck() {
+		
+		/*
+		 * -------Choosing Browser
+		 */
+		
 		h.chooseBrowser();
 		driver.get(config.getProperty("testUrl"));
 		h.citySelection();
-
+		
+		/*
+		 * --------Clicking 1 category from left panel randomly
+		 */
+		
 		h.waitForElement(30, By.className(or.getProperty("leftpanelcategories_class")));
 		List<WebElement> leftpanelcategories = driver.findElement(By.id(or.getProperty("leftpanelmenu_id"))).findElements(By.className(or.getProperty("leftpanelcategories_class")));
 
@@ -29,6 +38,11 @@ public class AAAAA_ItemRateCheckTest extends Helper {
 		int category = r.nextInt(leftpanelcategories.size());
 		((JavascriptExecutor)driver).executeScript("arguments[0].click();", leftpanelcategories.get(category));
 	  	h.sleep(10);
+	  	
+	  	/*
+	  	 * ----- Storing all the items in a list and getting one random single item rate to a String
+	  	 */
+	  	
 		List<WebElement> availableItems = driver.findElements(By.id(or.getProperty("availableproducts_id")));
 		
 		if (availableItems.isEmpty()) {
@@ -50,6 +64,10 @@ public class AAAAA_ItemRateCheckTest extends Helper {
 		String itemRate2 = driver.findElement(By.className(or.getProperty("itemprice"))).getText();
 		itemRate2 = itemRate2.substring(4);
 		Reporter.log(itemRate2);
+		
+		/*
+		 * ------- Comparing same item value in two differant pages 
+		 */
 		
 		if (Double.parseDouble(itemRate) != Double.parseDouble(itemRate2)) {
 			Reporter.log("Rates not matched across");

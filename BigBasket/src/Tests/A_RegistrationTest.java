@@ -30,7 +30,7 @@ public class A_RegistrationTest extends Helper {
 		driver.get(config.getProperty("testUrl"));
 		log.debug(config.getProperty("testUrl")+"   "+"has been opened");
 		h.citySelection();
-		log.debug("Selected a city randomly");
+		log.debug("Selected a city randomly to perform Registration task");
  	  
  	  
 	  

@@ -10,12 +10,16 @@ import testUtils.Helper;
 public class AA_SignInTest extends Helper {
   @Test
   public void login() throws InterruptedException{
+	  /*
+	   * -----Signing in with Valid credentials
+	   */
+	  
 	  h.chooseBrowser();
 	  driver.get(config.getProperty("testUrl"));
 	  h.citySelection();
-//	  List<WebElement> list = driver.findElement(By.id("ftv-city-popup")).findElements(By.tagName("button"));
-//	  int location = r.nextInt(list.size());
-//	  list.get(location).click();
+		//	  List<WebElement> list = driver.findElement(By.id("ftv-city-popup")).findElements(By.tagName("button"));
+		//	  int location = r.nextInt(list.size());
+		//	  list.get(location).click();
 	  h.sleep(10);
 	  log.debug("User signing in with the valid credential");
 	  driver.findElement(By.cssSelector(or.getProperty("login_css"))).click();
